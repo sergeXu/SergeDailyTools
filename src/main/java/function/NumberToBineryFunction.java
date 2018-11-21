@@ -9,9 +9,9 @@ import util.PrintUtil;
  * 2018/11/21 5:50 PM
  * 用于将十进制数字转换为2进制的功能
  */
-public final class NumberToBineryFunction extends BasicFunction{
-
-    public static void excute(String arg, Scanner scanner) {
+public final class NumberToBineryFunction implements BasicFunction{
+    @Override
+    public void excute(String arg, Scanner scanner) {
         PrintUtil.print("请输入目标数字，输入非数字退出");
         try {
             while (true) {

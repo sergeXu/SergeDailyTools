@@ -6,9 +6,10 @@ package enums;
  */
 public enum FunctionEnum {
 
-    HELP("h","help","获取指令列表"),
-    EXIT("exit","exit","结束应用"),
+    HELP("hp","help","获取指令列表"),
+    EXIT("et","exit","结束应用"),
     PASSWORD("pw","password","密码提示输出"),
+    ACCOUNT_HINT("ah","accountHint","账户信息记录"),
     NUMBER_TO_BIT("ntb","numberToBit","数字2进制编码");
 
 

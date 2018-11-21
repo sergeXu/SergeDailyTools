@@ -9,9 +9,9 @@ import util.PrintUtil;
  * sergexu
  * 2018/11/21 7:03 PM
  */
-public final class HelpFunction extends BasicFunction{
-
-    public static void excute(String arg, Scanner scanner) {
+public final class HelpFunction implements BasicFunction{
+    @Override
+    public void excute(String arg, Scanner scanner) {
         try {
             PrintUtil.print("可执行命令列表");
             PrintUtil.print(FunctionEnum.getAllFunctionDesc());

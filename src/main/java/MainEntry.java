@@ -3,6 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import enums.FunctionEnum;
+import function.AccoutHintFunction;
 import function.HelpFunction;
 import function.NumberToBineryFunction;
 import function.PasswordHintFunction;
@@ -36,14 +37,18 @@ public class MainEntry {
                 } else if (FunctionEnum.NUMBER_TO_BIT.getAbbr().equals(input) || FunctionEnum.NUMBER_TO_BIT.getTitle()
                     .equals(input)) {
                     funcRunDecs(FunctionEnum.NUMBER_TO_BIT);
-                    NumberToBineryFunction.excute(null, scanner);
+                    (new NumberToBineryFunction()).excute(null, scanner);
                 } else if (FunctionEnum.HELP.getAbbr().equals(input) || FunctionEnum.HELP.getTitle().equals(input)) {
                     funcRunDecs(FunctionEnum.HELP);
-                    HelpFunction.excute(null, scanner);
+                    (new HelpFunction()).excute(null, scanner);
                 } else if (FunctionEnum.PASSWORD.getAbbr().equals(input) || FunctionEnum.PASSWORD.getTitle().equals(
                     input)) {
                     funcRunDecs(FunctionEnum.PASSWORD);
                     (new PasswordHintFunction()).excute(null, scanner);
+                } else if (FunctionEnum.ACCOUNT_HINT.getAbbr().equals(input) || FunctionEnum.ACCOUNT_HINT.getTitle().equals(
+                    input)) {
+                    funcRunDecs(FunctionEnum.ACCOUNT_HINT);
+                    (new AccoutHintFunction()).excute(null, scanner);
                 } else {
                     print("功能: " + input + "  未找到，请重新输入指令");
                 }

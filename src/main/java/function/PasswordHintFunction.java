@@ -11,9 +11,9 @@ import util.PrintUtil;
  * sergexu
  * 2018/11/21 7:56 PM
  */
-public final class PasswordHintFunction {
+public final class PasswordHintFunction implements BasicFunction{
     private static List<PasswordStructDTO> passwordStructDTOList ;
-
+    @Override
     public void excute(String arg, Scanner scanner) {
         try {
             fillPasswordHintFunctionList();
@@ -70,7 +70,12 @@ public final class PasswordHintFunction {
         initPasswordHintFunctionList();
         addPasswordStructDTO(new PasswordStructDTO("xiphoid","精简密码",4,"game/webPage","",""));
         addPasswordStructDTO(new PasswordStructDTO("xiphoid00","精简密码",4,"computer","",""));
-        addPasswordStructDTO(new PasswordStructDTO("Xiphoid00","大小写密码",4,"login","",""));
+        addPasswordStructDTO(new PasswordStructDTO("Xiphoid00","大小写密码",3,"login","",""));
+        addPasswordStructDTO(new PasswordStructDTO("Xiphoid51","大小写密码",3,"login","",""));
+        addPasswordStructDTO(new PasswordStructDTO("Xiphoid12","大小写密码",3,"login","",""));
+        addPasswordStructDTO(new PasswordStructDTO("&Xzj13262280218","大小写符号密码",3,"mail/QQ","",""));
+        addPasswordStructDTO(new PasswordStructDTO("&Xzj19911212K","大小写符号密码",3,"mail","",""));
+        addPasswordStructDTO(new PasswordStructDTO("090817","大小写符号密码",2,"common","",""));
     }
 
 
