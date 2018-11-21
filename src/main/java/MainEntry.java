@@ -10,6 +10,7 @@ import util.ConfigUtil;
 import util.PrintUtil;
 
 import static util.PrintUtil.print;
+import static util.PrintUtil.printD;
 
 /**
  * sergexu
@@ -28,19 +29,21 @@ public class MainEntry {
                 if (input != null) {
                     input = input.trim();
                 }
-                print("input: "+input);
+                printD("input: " + input);
                 ////功能模块
-                if (FunctionEnum.EXIT.getAbbr().equals(input)||FunctionEnum.EXIT.getTitle().equals(input)) {
+                if (FunctionEnum.EXIT.getAbbr().equals(input) || FunctionEnum.EXIT.getTitle().equals(input)) {
                     funcRunDecs(FunctionEnum.EXIT);
-                }else if(FunctionEnum.NUMBER_TO_BIT.getAbbr().equals(input)||FunctionEnum.NUMBER_TO_BIT.getTitle().equals(input)){
+                } else if (FunctionEnum.NUMBER_TO_BIT.getAbbr().equals(input) || FunctionEnum.NUMBER_TO_BIT.getTitle()
+                    .equals(input)) {
                     funcRunDecs(FunctionEnum.NUMBER_TO_BIT);
-                    NumberToBineryFunction.excute(null,scanner);
-                }else if(FunctionEnum.HELP.getAbbr().equals(input)||FunctionEnum.HELP.getTitle().equals(input)){
+                    NumberToBineryFunction.excute(null, scanner);
+                } else if (FunctionEnum.HELP.getAbbr().equals(input) || FunctionEnum.HELP.getTitle().equals(input)) {
                     funcRunDecs(FunctionEnum.HELP);
-                    HelpFunction.excute(null,scanner);
-                }else if(FunctionEnum.PASSWORD.getAbbr().equals(input)||FunctionEnum.PASSWORD.getTitle().equals(input)){
+                    HelpFunction.excute(null, scanner);
+                } else if (FunctionEnum.PASSWORD.getAbbr().equals(input) || FunctionEnum.PASSWORD.getTitle().equals(
+                    input)) {
                     funcRunDecs(FunctionEnum.PASSWORD);
-                    PasswordHintFunction.excute(null,scanner);
+                    PasswordHintFunction.excute(null, scanner);
                 } else {
                     print("功能: " + input + "  未找到，请重新输入指令");
                 }
@@ -51,29 +54,26 @@ public class MainEntry {
                 } else {
                     print("系统异常，程序已停止 ");
                 }
-                if (ConfigUtil.debugMode) {
-                    print("Error " + "    " + e.toString());
-                    print(Arrays.toString(e.getStackTrace()));
-                    // e.printStackTrace();
-                }
+                printD("Error " + "    " + e.toString());
+                printD(Arrays.toString(e.getStackTrace()));
+
             }
         } while (!(FunctionEnum.EXIT.getTitle().equals(input)));
         close();
     }
 
-
-    public static void init(){
+    public static void init() {
         print("WelCome to SergeTools: ");
         print("(input 'exit' to stop)");
         scanner = new Scanner(System.in);
     }
 
-    public static void close(){
+    public static void close() {
         scanner.close();
         print("程序已关闭");
     }
 
-    private static void funcRunDecs(FunctionEnum functionEnum){
+    private static void funcRunDecs(FunctionEnum functionEnum) {
         print("功能: " + functionEnum.getDesc() + "  执行中");
     }
 }

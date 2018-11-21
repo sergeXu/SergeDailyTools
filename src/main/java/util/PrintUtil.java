@@ -11,7 +11,11 @@ public class PrintUtil {
      * @param string
      */
     public static void print(String string){
-        print(string,ConfigUtil.debugMode);
+        print(string,false);
+    }
+
+    public static void printD(String string){
+        print(string,ConfigUtil.isDebugMode());
     }
 
     public static void print(String string,boolean debugMode){
