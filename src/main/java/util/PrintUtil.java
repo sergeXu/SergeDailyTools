@@ -14,6 +14,10 @@ public class PrintUtil {
         print(string,false);
     }
 
+    /**
+     * debug 模式输出方法
+     * @param string
+     */
     public static void printD(String string){
         print(string,ConfigUtil.isDebugMode());
     }
