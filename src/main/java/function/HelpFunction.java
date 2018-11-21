@@ -9,7 +9,7 @@ import util.PrintUtil;
  * sergexu
  * 2018/11/21 7:03 PM
  */
-public class HelpFunction extends BasicFunction{
+public final class HelpFunction extends BasicFunction{
 
     public static void excute(String arg, Scanner scanner) {
         try {

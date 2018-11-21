@@ -43,7 +43,7 @@ public class MainEntry {
                 } else if (FunctionEnum.PASSWORD.getAbbr().equals(input) || FunctionEnum.PASSWORD.getTitle().equals(
                     input)) {
                     funcRunDecs(FunctionEnum.PASSWORD);
-                    PasswordHintFunction.excute(null, scanner);
+                    (new PasswordHintFunction()).excute(null, scanner);
                 } else {
                     print("功能: " + input + "  未找到，请重新输入指令");
                 }

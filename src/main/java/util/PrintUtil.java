@@ -11,7 +11,7 @@ public class PrintUtil {
      * @param string
      */
     public static void print(String string){
-        print(string,false);
+        print(string,true);
     }
 
     /**
@@ -22,8 +22,8 @@ public class PrintUtil {
         print(string,ConfigUtil.isDebugMode());
     }
 
-    public static void print(String string,boolean debugMode){
-        if(debugMode) {
+    public static void print(String string,boolean isPrint){
+        if(isPrint) {
             System.out.println(string);
         }
     }
