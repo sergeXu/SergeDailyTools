@@ -11,7 +11,7 @@ import util.PrintUtil;
  */
 public final class NumberToBineryFunction implements BasicFunction{
     @Override
-    public void excute(String arg, Scanner scanner) {
+    public void execute(String arg, Scanner scanner) {
         PrintUtil.print("请输入目标数字，输入非数字退出");
         try {
             while (true) {

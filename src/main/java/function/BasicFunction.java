@@ -14,5 +14,5 @@ public interface BasicFunction {
      * @param arg
      * @param scanner
      */
-     public abstract void excute(String arg, Scanner scanner);
+     public abstract void execute(String arg, Scanner scanner);
 }

@@ -5,7 +5,7 @@ package util;
  * 2018/11/21 7:13 PM
  */
 public class ConfigUtil {
-    public static boolean debugMode = true;
+    public static boolean debugMode = false;
 
     public static boolean isDebugMode() {
         return debugMode;

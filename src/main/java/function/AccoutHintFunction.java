@@ -16,7 +16,7 @@ import util.PrintUtil;
 public class AccoutHintFunction implements BasicFunction{
     private static List<AccountDTO> accountDTOList;
     @Override
-    public void excute(String arg, Scanner scanner) {
+    public void execute(String arg, Scanner scanner) {
         try {
             fillPasswordHintFunctionList();
             PrintUtil.print("账户信息提示列表");

@@ -11,9 +11,9 @@ import util.PrintUtil;
  */
 public final class HelpFunction implements BasicFunction{
     @Override
-    public void excute(String arg, Scanner scanner) {
+    public void execute(String arg, Scanner scanner) {
         try {
-            PrintUtil.print("可执行命令列表");
+            PrintUtil.print(" ^^  可执行命令列表  ^^");
             PrintUtil.print(FunctionEnum.getAllFunctionDesc());
         }catch (Exception e){
             PrintUtil.print("发生异常：" + e.toString());

@@ -14,7 +14,7 @@ import util.PrintUtil;
 public final class PasswordHintFunction implements BasicFunction{
     private static List<PasswordStructDTO> passwordStructDTOList ;
     @Override
-    public void excute(String arg, Scanner scanner) {
+    public void execute(String arg, Scanner scanner) {
         try {
             fillPasswordHintFunctionList();
             PrintUtil.print("密码提示列表");
@@ -28,7 +28,7 @@ public final class PasswordHintFunction implements BasicFunction{
     }
 
     public static void main(String[] args) {
-        (new PasswordHintFunction()).excute(null,new Scanner(System.in));
+        (new PasswordHintFunction()).execute(null,new Scanner(System.in));
     }
 
     /**
